@@ -1,0 +1,175 @@
+/* AFFECTS EVERYTHING */
+.body {
+  margin: 0;
+}
+
+/* custom css */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+
+/* Pg2 start */
+.intro-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.intro-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.btn-discover {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-discover:hover {
+  background-color: black;
+  color: white;
+}
+/* Pg2 end */
+
+/* Gallery start */
+.gallery-section .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.gallery-section .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+}
+.gallery-section .gallery-item:hover img {
+  transform: scale(1.1);
+}
+.gallery-section .gallery-item .gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+.gallery-section .gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+.gallery-section .gallery-item .gallery-overlay h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+/* Gallery end */
+
+/* Guide start */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+/* Guide end */
+
+/* Shop start */
+.image-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.shop-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+.image-box:hover .shop-overlay {
+  opacity: 1;
+}
+
+/* Shop end */
+
+@media screen and (max-width: 992px) {
+  .mobile-fix {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+}
